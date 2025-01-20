@@ -12,7 +12,7 @@ st.sidebar.header("Input Stock Information")
 stock_ticker = st.sidebar.text_input("Enter Stock Ticker", value="AAPL")
 start_date = st.sidebar.date_input("Start Date", value=pd.Timestamp("2020-01-01"))
 end_date = st.sidebar.date_input("End Date", value=pd.Timestamp("2023-01-01"))
-entries = st.sidebar.text_input("Number of table rows", value="5")
+entries = int(st.sidebar.text_input("Number of table rows", value="5"))
 
 # fetching stock data
 @st.cache_data
